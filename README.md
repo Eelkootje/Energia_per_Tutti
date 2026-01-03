@@ -1,0 +1,1 @@
+La “Comunità di Energia Rinnovabile Energia per Tutti” promuove la produzione e la condivisione di energia da fonti rinnovabili tra cittadini, imprese ed enti locali, favorendo sostenibilità ambientale, risparmio energetico e benefici economici per il territorio.
