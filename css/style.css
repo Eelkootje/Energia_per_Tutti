@@ -1,3 +1,173 @@
+/* =========================
+   Reset base
+========================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+               "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background-color: #fff;
+}
+
+/* =========================
+   Link
+========================= */
+a {
+  color: #0b6e4f;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+/* =========================
+   Layout base
+========================= */
+header,
+main,
+footer {
+  padding: 1.5rem 1rem;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* =========================
+   Hero (parallax soft)
+========================= */
+.hero {
+  position: relative;
+  background-image: url("../img/energia.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  padding: 6rem 1rem;
+  color: #fff;
+  text-align: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.hero-content {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/* Disattiva parallax su mobile */
+@media (max-width: 768px) {
+  .hero {
+    background-attachment: scroll;
+    padding: 4rem 1rem;
+  }
+}
+
+/* =========================
+   Navigazione
+========================= */
+nav {
+  background-color: #f5f7f6;
+  border-bottom: 1px solid #ddd;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+nav a {
+  font-weight: 600;
+  color: #0b6e4f;
+}
+
+/* =========================
+   Contenuti
+========================= */
+main h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  color: #0b6e4f;
+}
+
+main p {
+  margin-bottom: 1rem;
+  max-width: 75ch;
+}
+
+/* =========================
+   Sezione documenti
+========================= */
+.docs {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.doc {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.doc h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+.doc a {
+  font-weight: 600;
+}
+
+/* =========================
+   Footer
+========================= */
+footer {
+  margin-top: 3rem;
+  background-color: #f5f7f6;
+  border-top: 1px solid #ddd;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+footer p {
+  margin: 0.5rem 0;
+  text-align: center;
 }
